@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
-import { api } from "../api/api";
+import { fastFoodApi } from "../api/api";
+
 
 export const FoodDataContext = createContext();
 
@@ -7,7 +8,7 @@ const FoodContext = ({ children }) => {
     const[food, setFood] = useState([])
 
     const getFood = async ()=> {
-      const data = await api()
+      const data = await fastFoodApi()
 
       setFood(data.meals)
     }

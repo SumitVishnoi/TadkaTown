@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { FoodDataContext } from '../context/FoodContext'
 
 const FCarousal = () => {
+  const { food } = useContext(FoodDataContext)
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    if (food.length > 0) {
+      setInterval(()=> {
+        const randomIndex = Math.floor(Math.random() * food.length)
+        setIndex(randomIndex)
+      }, 5000)
+    }
+  }, [food])
+
+  if (food.length === 0) return <p className='flex justify-center'>Loading...</p>
+
   return (
-    <div className=''>
-        <div className='bg-black flex justify-center items-center'>
-            <img src="https://media.istockphoto.com/id/1222240358/photo/vegetable-pizza.jpg?s=612x612&w=0&k=20&c=YrS0mQ2S7Ww-_QsFSICAfR0Zx1r1fjRA1i8ZoHFDisI=" alt="" />
-        </div>
+    <div>
+      <div className="bg-black flex justify-center items-center h-[80vh]  ">
+        <img
+          src={food[index].strMealThumb}
+          alt={food[index].strMeal}
+          className='w-[90%] h-full object-cover object-center'
+        />
+      </div>
     </div>
   )
 }

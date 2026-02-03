@@ -5,22 +5,27 @@ import Home from './Pages/Home'
 import axios from 'axios'
 import Footer from './components/Footer'
 import FastFood from './Pages/FastFood'
+import MainCourse from './Pages/MainCourse'
+import Dessert from './Pages/Dessert'
 
 const App = () => {
 
-  const api = async ()=> {
-    const response = await axios.get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
-    console.log(response.data);
+  const mainCourseApi = async ()=> {
+    const response = await axios.get(import.meta.env.VITE_MAIN_COURSE_API)
+    console.log(response.data.meals);
   }
+
+  mainCourseApi()
 
   return (
     <div className='w-full'>
-      {/* <button onClick={api} className='bg-emerald-600 text-white px-5 py-2 rounded m-5'>click</button> */}
       <Navbar />
 
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/fastfood' element={<FastFood />}/>
+        <Route path='/fastfood' element={<MainCourse />}/>
+        <Route path='/fastfood' element={<Dessert />}/>
       </Routes>
 
       <Footer />

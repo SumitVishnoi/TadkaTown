@@ -1,6 +1,8 @@
 API:
 https://www.themealdb.com/api/json/v1/1/search.php?s=
 
+https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian
+
 pinterest design food website
 1. https://in.pinterest.com/pin/362117626312560905/
 2. https://in.pinterest.com/pin/930063760561572428/
