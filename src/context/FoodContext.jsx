@@ -23,8 +23,6 @@ const FoodContext = ({ children }) => {
       getFood
     }
 
-    
-
   return (
     <div>
       <FoodDataContext.Provider value={value}>{children}</FoodDataContext.Provider>

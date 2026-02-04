@@ -10,22 +10,15 @@ import Dessert from './Pages/Dessert'
 
 const App = () => {
 
-  const mainCourseApi = async ()=> {
-    const response = await axios.get(import.meta.env.VITE_MAIN_COURSE_API)
-    console.log(response.data.meals);
-  }
-
-  mainCourseApi()
-
   return (
     <div className='w-full'>
       <Navbar />
 
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/fastfood' element={<FastFood />}/>
-        <Route path='/fastfood' element={<MainCourse />}/>
-        <Route path='/fastfood' element={<Dessert />}/>
+        <Route path='/fast_food' element={<FastFood />}/>
+        <Route path='/main_course' element={<MainCourse />}/>
+        <Route path='/dessert' element={<Dessert />}/>
       </Routes>
 
       <Footer />

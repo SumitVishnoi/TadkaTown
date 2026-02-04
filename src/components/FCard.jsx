@@ -6,7 +6,7 @@ const FCard = ({name, categ, img}) => {
       <div className="rounded-2xl h-60 overflow-hidden">
         <img
           src={img}
-          className="w-full h-80 object-cover "
+          className="w-full h-80 object-cover hover:scale-110 transition-all ease duration-200"
           alt="Jeera Chawal"
         />
       </div>
@@ -20,7 +20,7 @@ const FCard = ({name, categ, img}) => {
 
       <div className="mt-4 px-2">
         <p className="text-sm italic opacity-80">{categ}</p>
-        <h2 className="text-2xl font-semibold leading-none">{name}</h2>
+        <h2 className="text-2xl font-semibold leading-none line-clamp-1">{name}</h2>
 
         <div className="flex items-center gap-1 mt-1 text-yellow-400 text-sm">
           ★★★★★

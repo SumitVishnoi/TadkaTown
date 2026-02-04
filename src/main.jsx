@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import FoodContext from "./context/FoodContext.jsx";
+import CourseContex from "./context/CourseContex.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <FoodContext>
-        <App />
-      </FoodContext>
+      <CourseContex>
+        <FoodContext>
+          <App />
+        </FoodContext>
+      </CourseContex>
     </BrowserRouter>
   </StrictMode>,
 );

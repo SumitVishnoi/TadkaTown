@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import FCard from '../components/FCard'
 import { FoodDataContext } from '../context/FoodContext'
 import FCarousal from '../components/FCarousal'
-import { IoMdText } from 'react-icons/io'
+
 
 const FastFood = () => {
   const {food} = useContext(FoodDataContext)

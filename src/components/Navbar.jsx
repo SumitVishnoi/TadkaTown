@@ -10,10 +10,10 @@ const Navbar = () => {
             <h1 className='font-bold text-xl text-[#BA5800] bg-black rounded-full p-3'>Food</h1>
         </div>
         <div className='lg:flex hidden items-center gap-5'>
-            <h4 onClick={()=> navigate("/")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75'>Home</h4>
-            <h4 onClick={()=> navigate("fastfood")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75'>Fast Food</h4>
-            <h4 className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75'>Main Course</h4>
-            <h4 className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75'>Dessert</h4>
+            <h4 onClick={()=> navigate("/")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75 cursor-pointer'>Home</h4>
+            <h4 onClick={()=> navigate("fast_food")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75 cursor-pointer'>Fast Food</h4>
+            <h4 onClick={()=> navigate("main_course")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75 cursor-pointer'>Main Course</h4>
+            <h4 onClick={()=> navigate("dessert")} className='font-medium hover:border-b-2 border-[#BA5800] transition-all linear duration-75 cursor-pointer'>Dessert</h4>
         </div>
         <div className='flex items-center gap-5'>
             <IoSearch className='w-5 h-5'/>
