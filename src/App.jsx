@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
@@ -9,6 +9,7 @@ import MainCourse from './Pages/MainCourse'
 import Dessert from './Pages/Dessert'
 
 const App = () => {
+
 
   return (
     <div className='w-full'>
